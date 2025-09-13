@@ -1,0 +1,23 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;  
+    background-color: aqua;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-right: 10px;
+}
+
