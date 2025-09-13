@@ -21,3 +21,32 @@ nav ul{
     margin-right: 10px;
 }
 
+.home{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 200px auto;
+}
+
+.home-content{
+    display: flex;             
+    align-items: center;         
+    gap: 40px;  
+    margin: 0 auto;                 
+}
+
+.text-content {
+    width: 60%;
+    max-width: 400px;         
+}
+
+.image-content {
+    width: 40%;             
+    display: flex;
+}
+
+.image-content img{
+    width: 150px;
+    height: 150px;
+}
+
