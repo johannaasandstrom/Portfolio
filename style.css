@@ -90,6 +90,10 @@ nav ul li{
 .socialmedia-buttons{
     display: flex;
     gap: 20px;
-
     padding-top: 30px;
+}
+
+.socialmedia-buttons a{
+    text-decoration: none;
+    color: #171515;
 }
