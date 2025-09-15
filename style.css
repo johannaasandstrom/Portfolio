@@ -39,6 +39,7 @@ nav ul li{
 
 .home{ 
     display: flex; 
+    flex-direction: column;
     justify-content: center; 
     align-items: center; 
     margin: 200px auto; 
@@ -75,4 +76,20 @@ nav ul li{
     width: 300px; 
     height: 300px; 
     border-radius: 50%;
+}
+
+.fa-linkedin{
+    font-size: 50px;
+    color: #0A66C2;
+}
+
+.fa-github{
+    font-size: 50px;
+}
+
+.socialmedia-buttons{
+    display: flex;
+    gap: 20px;
+
+    padding-top: 30px;
 }
