@@ -25,19 +25,28 @@ nav ul{
     display: flex;
     justify-content: center; 
     align-items: center;     
-    margin: 200px auto;
+    height: 100vh;
+    padding: 20px;
 }
 
 .home-content{
     display: flex;             
     align-items: center;         
-    gap: 40px;  
-    margin: 0 auto;                 
+    gap: 80px;                
 }
 
-.text-content {
-    width: 60%;
-    max-width: 400px;         
+.text-content{
+    width: 700px;
+}
+
+.text-content h1{
+    font-size: 50px;
+}
+
+.text-content h2{
+    font-size: 40px;
+    -webkit-text-stroke: 2px orange;
+    color: transparent;
 }
 
 .image-content {
