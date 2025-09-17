@@ -8,52 +8,48 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /*Genom att sätta header med en width på 100% så kommer den ta upp hela utrymmet från kant till kant - hela viewport*/
 }
 
 .header-content{
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Detta placerar de två barnen inom header (nav och h2) på en rad */
+    justify-content: space-between; /*Detta palcerar h2 till vänster, nav till höger */
     align-items: center;
-    flex-wrap: wrap;
-    padding: 1% 5%;
+    flex-wrap: wrap; /*Vid skalning av skärmstorlek kommer innehållet i header-content att delas upp på olika rader om det behövs*/
+    padding: 1% 5%; /*Utrymme för barnen inuti header med 1% luft från topp till botten och 5% från kant till kant*/
 }
 
 nav ul{
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+    display: flex; /*Länkarna i nav placeras på samma rad*/
+    gap: 20px; /*Utrymme mellan varje länk*/
 }
 
 main{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
+    display: flex; /*Jag vill placera alla barn i main i mitten av sidan och då behövs display flex för att göra om main till en container som är flex*/
+    justify-content: center; /*Applicerar jag display flex så kan jag placera alla barn i mitten av sidan med justify-content: center; - utan dispaly felx flyttas ej hela ''boxen''*/
+    margin-top: 200px; /*Ger utrymmet mellan main och header*/
 }
 
 .home-content{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 40px;
-    max-width: 1000px;
-    width: 90%;
+    display: flex; /*Jag lägger till display flex för att placera de två barnen inom home-content jämte varandra*/
+    flex-wrap: nowrap; /*Detta gör att text och bild inte bryts på olika rader vid mindre storlek utan att de ligger kvar jämte varandra oavsett*/
+    align-items: center; /*Detta placerar text och bild i mitten*/
+    gap: 40px; /*Detta skapar ett utrymme mellan text och bild*/
+    max-width: 1000px; /*Detta är en maxbredd för hela containern för text och bild (används för större skärmar)*/
+    width: 90%; /*Text och bild tar upp 90% av sin förälder (main) så den inte hamnar utanför eller orsaker scroll eller liknande vid mindre skärmar)*/
 }
 
 .text-content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
+    flex: 1; /*Detta betyder att textdelen med h1, h2, p och även ikonerna kommer att ta upp allt övrigt utrymme av den 90% som finns kvar när bilden har tagit det utrymme den behöver*/
+    display: flex; /*Vi gör en egen flex inom flexen för att kunna placera barnen inom text-content på det sätt vi önskar*/
+    flex-direction: column; /*Vi placerar de i en kolumn så de alltid följer varandra och stapals i en kolumn*/
 }
 
 .social-media-buttons{
-    display: flex;
+    display: flex; /*Vi placerar knapparna jämte varandra*/
 }
 
 .image-content img{
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%;
+    max-width: 200px; /*Men bilden blir aldrig större än 200px vilket betyder att texten får 800px att arbeta med*/
+    border-radius: 50%; /*Vi gör bilden helt rund*/
 }
