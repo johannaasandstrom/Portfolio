@@ -1,14 +1,15 @@
-body{
+html, body{
     background-color: lightgrey;
-    margin: 0;
+    margin: 0; /*Neutralsiera och ta bort marginaler som kan läggas till av webbläsare som kan störa layout och önskad placering*/
 }
 
 header{
     background-color: lightgrey;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; /*Header förblir i toppen även vid scroll*/
+    top: 0; /*Header tar upp allt utrymme uppåt*/
+    left: 0; /*Header fyller allt utrymme till kanten*/
     width: 100%; /*Genom att sätta header med en width på 100% så kommer den ta upp hela utrymmet från kant till kant - hela viewport*/
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .header-content{
@@ -16,40 +17,85 @@ header{
     justify-content: space-between; /*Detta palcerar h2 till vänster, nav till höger */
     align-items: center;
     flex-wrap: wrap; /*Vid skalning av skärmstorlek kommer innehållet i header-content att delas upp på olika rader om det behövs*/
-    padding: 1% 5%; /*Utrymme för barnen inuti header med 1% luft från topp till botten och 5% från kant till kant*/
+    padding: 4% 4%; /*Utrymme för barnen inuti header med 1% luft från topp till botten och 5% från kant till kant*/
+}
+
+header h2{
+    font-size: 16px;
 }
 
 nav ul{
     display: flex; /*Länkarna i nav placeras på samma rad*/
-    gap: 20px; /*Utrymme mellan varje länk*/
+    gap: 5%; /*Utrymme mellan varje länk*/
+    list-style: none; /*Tar bort pricken framför ett objekt i listan*/
+    justify-content: flex-end; /*Detta placerar länkarna i slutet (höger) av header*/
+}
+
+nav ul li {
+    font-size: 12px;
 }
 
 main{
     display: flex; /*Jag vill placera alla barn i main i mitten av sidan och då behövs display flex för att göra om main till en container som är flex*/
+    height: 100vh; /*Detta gör att main alltid fyller 100% av viewport*/
     justify-content: center; /*Applicerar jag display flex så kan jag placera alla barn i mitten av sidan med justify-content: center; - utan dispaly felx flyttas ej hela ''boxen''*/
-    margin-top: 200px; /*Ger utrymmet mellan main och header*/
+    margin-top: 100px; /*Ger utrymmet mellan main och header*/
 }
 
 .home-content{
     display: flex; /*Jag lägger till display flex för att placera de två barnen inom home-content jämte varandra*/
+    flex-direction: column-reverse; /*Detta placerar bilden över textdelen*/
     flex-wrap: nowrap; /*Detta gör att text och bild inte bryts på olika rader vid mindre storlek utan att de ligger kvar jämte varandra oavsett*/
     align-items: center; /*Detta placerar text och bild i mitten*/
-    gap: 40px; /*Detta skapar ett utrymme mellan text och bild*/
+    gap: 20px; /*Detta skapar ett utrymme mellan text och bild*/
     max-width: 1000px; /*Detta är en maxbredd för hela containern för text och bild (används för större skärmar)*/
     width: 90%; /*Text och bild tar upp 90% av sin förälder (main) så den inte hamnar utanför eller orsaker scroll eller liknande vid mindre skärmar)*/
+    justify-content: center; /*Placerar allt innehåll inuti home-content i mitten - alltså bild och text*/
+    height: auto;
 }
 
 .text-content{
     flex: 1; /*Detta betyder att textdelen med h1, h2, p och även ikonerna kommer att ta upp allt övrigt utrymme av den 90% som finns kvar när bilden har tagit det utrymme den behöver*/
     display: flex; /*Vi gör en egen flex inom flexen för att kunna placera barnen inom text-content på det sätt vi önskar*/
     flex-direction: column; /*Vi placerar de i en kolumn så de alltid följer varandra och stapals i en kolumn*/
+    align-items: center;
+    max-width: 300px; /*Detta gör delen för texten mindre på större skärmar för att den inte ska ta upp för stor yta - rent visuell smaksak*/
+}
+
+.text-content h1{
+    font-size: 20px;
 }
 
 .social-media-buttons{
     display: flex; /*Vi placerar knapparna jämte varandra*/
+    gap: 12px; /*Skapar ett utrymme mellan knapparna*/
+    margin-top: 10px; /*Detta skapar ett litet större utrymme mellan text och knapparna*/
 }
 
 .image-content img{
-    max-width: 200px; /*Men bilden blir aldrig större än 200px vilket betyder att texten får 800px att arbeta med*/
+    max-width: 150px; /*Men bilden blir aldrig större än 200px vilket betyder att texten får 800px att arbeta med*/
+    height: auto; /*Detta gör så att bildens höjd alltid anpassar sig efter bildens bredd så den aldrig flyter ut eller tappar sina proportioner*/
     border-radius: 50%; /*Vi gör bilden helt rund*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /*0 = höger och vänster, 4px = under bilden (hade det varit ett negativt tal så är det ovanför bilden), 10px = oskärpa/blur)*/
+}
+
+.text-content h2{
+    font-size: 18px;
+    color: transparent; /*Tar bort textens färg*/
+    -webkit-text-stroke: 1px purple; /*Detta gör att vi kan fylla i konturerna/strecken på bokstäverna*/
+    margin: 5px 0; /*Minskar avstånd mellan h2 och p*/
+    letter-spacing: 2px; /*Skapar utrymme mellan bokstäverna*/
+}
+
+.text-content p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.fa-github{
+    font-size: 20px;
+}
+
+.fa-linkedin{
+    font-size: 20px;
 }
