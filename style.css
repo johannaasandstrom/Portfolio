@@ -102,11 +102,15 @@ main{
     font-size: 20px;
 }
 
+
+
+
 /*Anpassad layout för större skärm för 600px - 900px */
 
 @media (min-width: 600px) {
     .home-content{
         flex-direction: row;
+       gap: 50px;
     }
     main{
         margin-top: 70px;
@@ -128,5 +132,5 @@ main{
     }
     .fa-linkedin{
     font-size: 26px;
-}
+    }
 }
