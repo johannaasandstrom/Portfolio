@@ -37,6 +37,10 @@ header{
     display: none; /*Vi gömmer allt innehåll i nav då det är de som vi vill visa först när vi trycker på ikonen*/
 }
 
+.menu-nav.open{
+    display: block;
+}
+
 .fa-bars{
     font-size: 40px;
 }
