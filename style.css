@@ -22,15 +22,32 @@ header{
     padding: 4% 4%; /*Utrymme för barnen inuti header med 1% luft från topp till botten och 5% från kant till kant*/
 }
 
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-Btn{
+    background: none;
+    border: none;
+}
+
+.menu-nav{
+    display: none; /*Vi gömmer allt innehåll i nav då det är de som vi vill visa först när vi trycker på ikonen*/
+}
+
+.fa-bars{
+    font-size: 40px;
+}
+
 header h2{
     font-size: 16px;
 }
 
 nav ul{
-    display: flex; /*Länkarna i nav placeras på samma rad*/
     gap: 5%; /*Utrymme mellan varje länk*/
-    list-style: none; /*Tar bort pricken framför ett objekt i listan*/
-    justify-content: flex-end; /*Detta placerar länkarna i slutet (höger) av header*/
+    list-style: none; /*Tar bort pricken framför ett objekt i listan*/ 
 }
 
 nav ul li {
@@ -41,7 +58,7 @@ main{
     display: flex; /*Jag vill placera alla barn i main i mitten av sidan och då behövs display flex för att göra om main till en container som är flex*/
     height: 100vh; /*Detta gör att main alltid fyller 100% av viewport*/
     justify-content: center; /*Applicerar jag display flex så kan jag placera alla barn i mitten av sidan med justify-content: center; - utan dispaly felx flyttas ej hela ''boxen''*/
-    margin-top: 100px; /*Ger utrymmet mellan main och header*/
+    margin-top: 150px; /*detta ger utrymme mellan main och header*/
 }
 
 .home-content{
