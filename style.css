@@ -16,16 +16,14 @@ header{
 
 .header-content{
     display: flex; /* Detta placerar de två barnen inom header (nav och h2) på en rad */
-    justify-content: space-between; /*Detta palcerar h2 till vänster, nav till höger */
-    align-items: center;
-    flex-wrap: wrap; /*Vid skalning av skärmstorlek kommer innehållet i header-content att delas upp på olika rader om det behövs*/
-    padding: 4% 4%; /*Utrymme för barnen inuti header med 1% luft från topp till botten och 5% från kant till kant*/
+    justify-content: space-between;
+    padding: 4% 4%; /*Utrymme för barnen inuti header med 4% luft från topp till botten och 4% från kant till kant*/
 }
 
-.menu{
+.menu-container{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
 }
 
 .menu-Btn{
